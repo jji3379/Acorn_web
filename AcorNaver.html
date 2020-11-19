@@ -4,106 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AcorNaver</title>
+    <link rel="stylesheet" href="./css/Acorn.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <script src="./js/jquery-3.5.1.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
-    <style>
-        .green{
-            color: rgb(4, 224, 151);
-            font-weight: bold;
-        }
-        .black{
-            color: black;
-            font-weight: bold;
-        }
-        .ablack{ /*a tag 검은색*/
-            color:rgb(104, 103, 103);
-        }
-        .dlbox{ /*더보기 밑에 설정*/
-            width: 153px;
-            height: 275px;
-            border-right: solid thin gray;
-            margin-left: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <!--상단 검색창-->
         <div>
-            
+            <div class="logo_special">
+                <div class="logo_group">
+                    <div class="logo_area">
+                        <h1 class="logo_base">
+                            <a href ="#"><img class="imgLogo" src="./img/naverlogo.PNG"></a>
+                        </h1>
+                        <div id="searchBar">
+                            <input type="text" >
+                            <button id="searchBtn" type="submit">
+                            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
+
         <!--메일 및 더보기 창-->
         <div>
-            <nav class="navbar navbar-expand navbar-success bg-white">
-                <div class="collapse navbar-collapse" id="navbarNavDropdown"> <!--navbar-->>
-                  <ul class="navbar-nav row align-items-start"> <!--상단 배치-->
-                    <li class="nav-item">
-                        <a class="nav-link green" href="https://mail.naver.com/">메일 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link green" href="https://section.cafe.naver.com/">카페 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link green" href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0">블로그 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link green" href="https://kin.naver.com/">지식iN <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link green" href="https://shopping.naver.com/">쇼핑 <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link green" href="https://order.pay.naver.com/home">Pay <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link green" href="https://tv.naver.com/">TV <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://dict.naver.com/">사전<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://news.naver.com/">뉴스<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://finance.naver.com/">증권<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://land.naver.com/">부동산<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://map.naver.com/v5/?c=14140822.8713868,4508397.7630627,15,0,0,0,dh">지도<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://movie.naver.com/">영화<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://vibe.naver.com/today">VIBE<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://book.naver.com/">책<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link black" href="https://comic.naver.com/index.nhn">웹툰<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li> <!--더보기창 collapse 사용-->>
-                        <a class="btn btn-link black" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                            더보기⋎
-                        </a>
-                    </li>    
-                        <div class="collapse" id="collapseExample">
+            <nav class="navbar navbar-expand navbar-success bg-white"> <!--navbar-->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav row ">
+                        <li class="nav-item">
+                            <a class="nav-link green" href="https://mail.naver.com/">메일 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link green" href="https://section.cafe.naver.com/">카페 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link green" href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0">블로그 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link green" href="https://kin.naver.com/">지식iN <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link green" href="https://shopping.naver.com/">쇼핑 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link green" href="https://order.pay.naver.com/home">Pay <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link green" href="https://tv.naver.com/">TV <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://dict.naver.com/">사전<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://news.naver.com/">뉴스<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://finance.naver.com/">증권<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://land.naver.com/">부동산<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://map.naver.com/v5/?c=14140822.8713868,4508397.7630627,15,0,0,0,dh">지도<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://movie.naver.com/">영화<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://vibe.naver.com/today">VIBE<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://book.naver.com/">책<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link black" href="https://comic.naver.com/index.nhn">웹툰<span class="sr-only">(current)</span></a>
+                        </li>
+                            <a style="font-weight: bold; color:black" class="btn btn-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              더보기⋎ <!--class에 black이 안먹어서 inline으로 넣음-->
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <div class="container">
-                                <div class="row align-items-center"><!--위치 중간으로 설정-->>
+                                <div class="row">
                                     <div>
-                                        <dl class="dlbox"> <!--box css-->>
+                                        <dl class="dlbox"> <!--box css-->
                                             <dt>ㄱ-ㅁ</dt>
                                             <dd><a href="#" class="ablack">날씨</a></dd>
                                             <dd><a href="#" class="ablack">네이버 MY CAR</a></dd>
                                             <dd><a href="#" class="ablack">네이버 게임</a></dd>
                                             <dd><a href="#" class="ablack">네이버 예약</a></dd>
-                                            <dd><a href="#" class="ablack">네이버플러스 멤버십</a></dd>
-                                            <dd><a href="#" class="ablack">뉴스</a></dd>
+                                            <dd><a href="#" class="ablack">네이버플러스 멤버십</a></dd>                                                <dd><a href="#" class="ablack">뉴스</a></dd>
                                             <dd><a href="#" class="ablack">데이터랩</a></dd>
                                             <dd><a href="#" class="ablack">메모</a></dd>
                                         </dl>
@@ -169,15 +166,19 @@
                                         <dd><a href="#" class="ablack">한자사전</a></dd>
                                         <dd><a href="#" class="ablack">사전 더보기 > </a></dd>                                        
                                     </dl>                                    
-                                </div>
+                                </div>        
                             </div>
                         </div>
-                    
-                  </ul>
-                </div>
-              </nav>
+                    </ul>
+                </div>               
+            </nav>
         </div>
-        <!--다음꺼-->
+
+        <!--분할-->
+        <div class="row">
+            <div style="background-color: rgb(73, 234, 255); height: 300px; border: outset;" class="col-8"></div>
+            <div style="background-color: rgb(159, 132, 255); height: 300px; border: outset;" class="col-4"></div>
+        </div>
         <div></div>
         <div></div>
         <div></div>
